@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-blog/static/css/main.dfca195d.chunk.css",
+    "main.js": "/react-blog/static/js/main.443a1cc4.chunk.js",
+    "main.js.map": "/react-blog/static/js/main.443a1cc4.chunk.js.map",
+    "runtime-main.js": "/react-blog/static/js/runtime-main.0a20e50e.js",
+    "runtime-main.js.map": "/react-blog/static/js/runtime-main.0a20e50e.js.map",
+    "static/js/2.5412fa84.chunk.js": "/react-blog/static/js/2.5412fa84.chunk.js",
+    "static/js/2.5412fa84.chunk.js.map": "/react-blog/static/js/2.5412fa84.chunk.js.map",
+    "index.html": "/react-blog/index.html",
+    "precache-manifest.667cef79f85f97319c7bcea744947cf3.js": "/react-blog/precache-manifest.667cef79f85f97319c7bcea744947cf3.js",
+    "service-worker.js": "/react-blog/service-worker.js",
+    "static/css/main.dfca195d.chunk.css.map": "/react-blog/static/css/main.dfca195d.chunk.css.map",
+    "static/media/logo.svg": "/react-blog/static/media/logo.25bf045c.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0a20e50e.js",
+    "static/js/2.5412fa84.chunk.js",
+    "static/css/main.dfca195d.chunk.css",
+    "static/js/main.443a1cc4.chunk.js"
+  ]
+}

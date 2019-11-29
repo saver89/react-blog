@@ -1,3 +1,5 @@
+This project is my first react app where i will practice react and this will be my future blog
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

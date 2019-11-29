@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Button from '@material-ui/core/Button';
 
 function greeter(person: string) {
   return "Hello, " + person;
@@ -13,7 +14,9 @@ const App: React.FC = () => {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          {greeter("VOVA")}
+        <Button variant="contained" color="primary">
+          Hello World
+        </Button>
         </p>
         <a
           className="App-link"

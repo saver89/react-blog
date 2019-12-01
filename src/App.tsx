@@ -23,12 +23,19 @@ function Copyright() {
 
 
 
+
 export default function App() {
   const [posts, setPost] = useState([
     {id: 1, title: "POST1"},
     {id: 2, title: "POST2"},
     {id: 3, title: "POST3"}
   ]);
+
+  let detelePostHandler = (postIndex: number) => {
+    const dposts = [...posts];
+    dposts.splice(postIndex, 1);
+    setPost(dposts);
+  };
 
   return (
     <Container maxWidth="sm">

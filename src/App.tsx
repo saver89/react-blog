@@ -43,7 +43,7 @@ export default function App() {
         <Typography variant="h4" component="h1" gutterBottom>
           Create React App v4-beta example with TypeScript
         </Typography>
-        {posts.map(post => (<Person key={post.id} id={post.id} title={post.title}/>))}
+        {posts.map((post, index) => (<Person click={() => detelePostHandler(index)} key={post.id} id={post.id} title={post.title}/>))}
         <Copyright />
       </Box>
     </Container>

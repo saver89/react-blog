@@ -4,9 +4,6 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Link from '@material-ui/core/Link';
 import Person from './components/Post';
-import post1 from './blog-post.1.md';
-import post2 from './blog-post.2.md';
-import post3 from './blog-post.3.md';
 
 function Copyright() {
   return (
@@ -37,8 +34,8 @@ export default function App() {
   };
 
   let postEditedHandler = (event: any, id: any) => {
-    const postIndex = posts.findIndex(post => post.id == id);
-    const post = {... posts[postIndex]};
+    const postIndex = posts.findIndex(post => post.id === id);
+    const post = {...posts[postIndex]};
     post.title = event.target.value;
     const tempPosts = [...posts];
     tempPosts[postIndex] = post;
@@ -72,7 +69,7 @@ export default function App() {
         <Typography variant="h4" component="h1" gutterBottom>
           Create React App v4-beta example with TypeScript
         </Typography>
-        <button onClick={(event) => toggleShowPostsHandler(event)} title="Показать посты"/>
+        <button onClick={(event) => toggleShowPostsHandler(event)}>Показать посты</button>
         {displayPosts}        
         <Copyright />
       </Box>

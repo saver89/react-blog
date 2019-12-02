@@ -27,6 +27,8 @@ export default function App() {
     { id: 2, title: "POST2" },
     { id: 3, title: "POST3" }
   ]);
+  
+  const [showPosts, setShowPosts] = useState(false);
 
   let detelePostHandler = (postIndex: number) => {
     const tempPost = [...posts];
@@ -43,6 +45,26 @@ export default function App() {
 
     setPost(tempPosts);
   };
+  
+  let toggleShowPostsHandler = (event: any) => {
+    setShowPosts(true);
+  };
+
+  let displayPosts = null;
+  if (showPosts) {
+    displayPosts = (
+      <div>
+        {posts.map((post, index) => {
+          return <Person
+            changed={(event: any) => postEditedHandler(event, post.id)}
+            click={() => detelePostHandler(index)}
+            key={post.id}
+            id={post.id}
+            title={post.title} />;
+        })}
+      </div>
+    );
+  }
 
   return (
     <Container maxWidth="sm">
@@ -50,11 +72,8 @@ export default function App() {
         <Typography variant="h4" component="h1" gutterBottom>
           Create React App v4-beta example with TypeScript
         </Typography>
-        {posts.map((post, index) => {
-          return <Person changed={(event: any) => postEditedHandler(event, post.id)}
-            click={() => detelePostHandler(index)}
-            key={post.id} id={post.id} title={post.title} />;
-        })}
+        <button onClick={(event) => toggleShowPostsHandler(event)} title="Показать посты"/>
+        {displayPosts}        
         <Copyright />
       </Box>
     </Container>

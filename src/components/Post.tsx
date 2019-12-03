@@ -9,7 +9,7 @@ interface post {
 
 export default function Post(props: post) {
     return <div>
-        <input type="text" onChange={(event) => props.changed(event)} />
+        <input type="text" onChange={(event) => props.changed(event)} value={props.title}/>
         <div onClick={() => { props.click() }}>{props.title}</div>
         </div>;
 }

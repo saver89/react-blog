@@ -3,7 +3,7 @@ import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Link from '@material-ui/core/Link';
-import Person from './components/Post';
+import Post from './components/Post';
 
 function Copyright() {
   return (
@@ -52,7 +52,7 @@ export default function App() {
     displayPosts = (
       <div>
         {posts.map((post, index) => {
-          return <Person
+          return <Post
             changed={(event: any) => postEditedHandler(event, post.id)}
             click={() => detelePostHandler(index)}
             key={post.id}
@@ -70,7 +70,7 @@ export default function App() {
           Create React App v4-beta example with TypeScript
         </Typography>
         <button onClick={(event) => toggleShowPostsHandler(event)}>Показать посты</button>
-        {displayPosts}        
+        {displayPosts}
         <Copyright />
       </Box>
     </Container>

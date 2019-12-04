@@ -4,6 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Link from '@material-ui/core/Link';
 import Post from './components/Post';
+import { green } from '@material-ui/core/colors';
 
 function Copyright() {
   return (
@@ -27,6 +28,15 @@ export default function App() {
   
   const [showPosts, setShowPosts] = useState(false);
 
+  let buttonStyle = {
+    backgroundColor: "green",
+    color: "white",
+    font: "inherit",
+    border: "1px solid blue",
+    padding: "8px",
+    cursor: "pointer"
+  };
+
   let detelePostHandler = (postIndex: number) => {
     const tempPost = [...posts];
     tempPost.splice(postIndex, 1);
@@ -44,7 +54,7 @@ export default function App() {
   };
   
   let toggleShowPostsHandler = (event: any) => {
-    setShowPosts(true);
+    setShowPosts(!showPosts);
   };
 
   let displayPosts = null;
@@ -61,6 +71,8 @@ export default function App() {
         })}
       </div>
     );
+
+    buttonStyle.backgroundColor = "red";
   }
 
   return (
@@ -69,7 +81,7 @@ export default function App() {
         <Typography variant="h4" component="h1" gutterBottom>
           Create React App v4-beta example with TypeScript
         </Typography>
-        <button onClick={(event) => toggleShowPostsHandler(event)}>Показать посты</button>
+        <button style={buttonStyle} onClick={(event) => toggleShowPostsHandler(event)}>Показать посты</button>
         {displayPosts}
         <Copyright />
       </Box>

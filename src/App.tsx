@@ -4,7 +4,6 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Link from '@material-ui/core/Link';
 import Post from './components/Post';
-import { green } from '@material-ui/core/colors';
 
 function Copyright() {
   return (
@@ -75,12 +74,22 @@ export default function App() {
     buttonStyle.backgroundColor = "red";
   }
 
+  let classes = [];
+  if (posts.length <= 2) {
+    classes.push("red");
+  }
+  if (posts.length <= 1) {
+    classes.push("bold");
+  }
+  let classNames = classes.join(' ');
+
   return (
     <Container maxWidth="sm">
       <Box my={4}>
         <Typography variant="h4" component="h1" gutterBottom>
           Create React App v4-beta example with TypeScript
         </Typography>
+        <p className={classNames}>Test text for dynamic styles</p>
         <button style={buttonStyle} onClick={(event) => toggleShowPostsHandler(event)}>Показать посты</button>
         {displayPosts}
         <Copyright />
